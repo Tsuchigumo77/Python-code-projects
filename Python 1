@@ -1,0 +1,7 @@
+def print_user_details(first_name,last_name,age):
+    print(f" Hi {first_name} {last_name}! You are {age} years old")
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    age = int(input())
+    print_user_details(first_name, last_name, age)
