@@ -1,0 +1,20 @@
+inmate_name = "Joker"
+real_name = "Unknown"
+inmate_age = 35
+weight = 195
+height = 1.96
+threat_level = 95.5
+insane = True
+favorite_weapons = ['joker venom', 'crowbar', 'cain', 'jack in the boxing gloves', 'everything']
+date_of_birth = ('unknown', 'unknown', 'unknown')
+
+
+print(type(inmate_name))
+print(type(real_name))
+print(type(inmate_age))
+print(type(weight))
+print(type(height))
+print(type(threat_level))
+print(type(insane))
+print(type(favorite_weapons))
+print(type(date_of_birth))
