@@ -1,0 +1,19 @@
+Court_of_Owls_employee = "Lincoln March"
+Court_of_Owls_id = "Owlman092011"
+hours_worked = 15
+hourly_rate = 1000.02 
+tools_used = ['Jetpack','Talon guantlets','Explosives', 'Knives']
+Date_of_initiation = ("9","20","2011")
+
+
+if hours_worked < 40:
+    print("A Talon Strikes You Dead!")
+else:
+    print("Welcome to the Court of Owls")
+    
+print(Court_of_Owls_employee, type(Court_of_Owls_employee))
+print(Court_of_Owls_id, type(Court_of_Owls_id))
+print(hours_worked, type(hours_worked))
+print(hourly_rate, type(hourly_rate))
+print(tools_used, type(tools_used))
+print(Date_of_initiation, type(Date_of_initiation))
