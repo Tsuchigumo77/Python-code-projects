@@ -1,0 +1,28 @@
+Customer_name = "Joe Chill"
+Vip_number_of_passes = 50
+Vip_Token_per_pass = 70
+price_per_pass = 100 #it's the Iceberg Lounge Vip Room in Gotham City what did you expect.
+Tokens_required_per_game = 10
+Vip_Limit = 5
+Vip_status = [80, 90, 70]
+
+Total_Tokens = Vip_number_of_passes * Vip_Token_per_pass
+Total_Cost =  Vip_number_of_passes * price_per_pass
+Games_available = Total_Tokens // Tokens_required_per_game
+
+if Games_available < 100:
+    print("Vip Overload")
+elif Games_available > 300:
+    print("Looks like someone is on a roll")
+    
+if len(Vip_status) < Vip_Limit:
+    Vip_status.append(100)
+    print("Good balance:", Vip_status)
+else:
+    print("Limit reached. please recharge your VIP pass ")
+    
+print("Customer:",Customer_name)
+print("VIP Pases:",Vip_number_of_passes)
+print("Total Tokens:",Total_Tokens)
+print("Total Cost: $",Total_Cost)
+print("Games Available:",Games_available)
