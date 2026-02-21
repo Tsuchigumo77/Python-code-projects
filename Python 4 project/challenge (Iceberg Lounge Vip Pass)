@@ -21,8 +21,15 @@ if len(Vip_status) < Vip_Limit:
 else:
     print("Limit reached. please recharge your VIP pass ")
     
+while Total_Tokens >= Tokens_required_per_game:
+    remaining_tokens = Tokens_required_per_game - Games_available
+    print(remaining_tokens)
+    
+    
+    
 print("Customer:",Customer_name)
 print("VIP Pases:",Vip_number_of_passes)
 print("Total Tokens:",Total_Tokens)
 print("Total Cost: $",Total_Cost)
 print("Games Available:",Games_available)
+
