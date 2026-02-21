@@ -1,0 +1,14 @@
+name=input('Enter the Prisoners name')
+age=int(input('Enter the Prisoners age'))
+primary_weapon=input('Enter Prisoners weapon choice')
+how_old_after_10_years= age + 10
+crime_committed=input('Enter Crime commited')
+message='This Inmate is to be sentenced to life in Prison.'
+
+print("-- Prisoner Record ---")
+print("Name:",name)
+print("Age:",age)
+print("Weapon:",primary_weapon)
+print("Age in 10 years:",how_old_after_10_years)
+print("Crime",crime_committed)
+print(message)

@@ -1,0 +1,67 @@
+# Player set-up
+Customer_name = "John Doe"
+Vip_number_of_passes = 50
+Vip_Token_per_pass = 70
+price_per_pass = 100 #it's the Iceberg Lounge Vip Room in Gotham City what did you expect.
+Total_Tokens = 50
+Tokens_required_per_game = 10
+Vip_passes = 7
+Vip_Limit = 5
+Vip_status = [80, 90, 70]
+
+
+Total_Tokens = Vip_number_of_passes * Vip_Token_per_pass
+Total_Cost =  Vip_number_of_passes * price_per_pass
+Games_available = Total_Tokens // Tokens_required_per_game
+
+
+# Welcome message
+print(f"Welcome to the Iceberg Lounge VIP Room, {Customer_name}!")
+print(f"You have {Total_Tokens} and {Vip_passes} VIP passes .\n")
+
+# Vip Messages 
+if Games_available < 100:
+    print("Vip Overload")
+elif Games_available > 300:
+    print("Looks like someone is on a roll")
+    
+if len(Vip_status) < Vip_Limit:
+    Vip_status.append(100)
+
+    print("Good balance:", Vip_status)
+else:
+    print("Limit reached. please recharge your VIP pass ")
+    
+# game loop
+while Total_Tokens >= Tokens_required_per_game:
+    # Ask which mini-game to play this round
+    Player_choice = input("Would you like to play blackjack, dice roll, or slots? (Bj/Dr/Sl): ").lower().strip()
+    print("You chose:", Player_choice)
+    if Player_choice in ["bj", "blackjack"]:
+        print("You want to play blackjack!")
+    elif Player_choice in ["dr", "dice roll"]:
+        print("You want to play dice roll!")
+    elif Player_choice in ["sl", "slots"]:
+        print("You want to play slots!")
+    else:
+        print("Invalid choice. Skipping this round.")
+        continue  # go to next iteration without deducting tokens
+    
+    # Ask if the player really wants to play
+    play = input("Do you want to play this game? (yes/no): ").lower()
+    if play == "yes":
+        Total_Tokens -= Tokens_required_per_game  # deduct tokens
+        print("Game played! Remaining tokens:", Total_Tokens)
+    elif play == "no":
+        print("Thanks for playing! Please come again...")
+        break  # exit the loop
+    else:
+        print("Invalid choice. Please type 'yes' or 'no'.")
+    
+
+# summary 
+print("Customer:",Customer_name)
+print("VIP Pases:",Vip_number_of_passes)
+print("Total Tokens:",Total_Tokens)
+print("Total Cost: $",Total_Cost)
+print("Games Available:",Games_available)
